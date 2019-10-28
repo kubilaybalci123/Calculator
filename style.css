@@ -1,0 +1,77 @@
+body{
+  background-color: rgb(219, 223, 27);
+}
+
+#ac {grid-area: header1;}
+#delete { grid-area: header2;}
+#seven{grid-area: first1;}
+#eight{grid-area: first2;}
+#nine{grid-area: first3;}
+#subtract{grid-area: first4;}
+#four{grid-area: second1;}
+#five{grid-area: second2;}
+#six{grid-area: second3;}
+#add {grid-area: second4;}
+#one{grid-area: third1;}
+#two{grid-area: third2;}
+#three{grid-area: third3;}
+#multiply {grid-area: third4;}
+#dot{grid-area: fourth1;}
+#zero{grid-area: fourth2;}
+#equal{grid-area: fourth3; background-color: red; color: white;}
+#divide {grid-area: fourth4;}
+
+.calculator{
+  display: grid;
+  justify-content: center;
+}
+
+.keys {
+  border: 3px solid black;
+  display: grid;
+  width: 400px;
+  height:400px;
+  grid-gap:1px;
+  grid-template-columns: 25% 25% 25% auto;
+  grid-template-rows:  20% auto 20% 20% 20%;
+  grid-template-areas: "header1 header1 header2 header2"
+                        "first1 first2 first3 first4"
+                        "second1 second2 second3 second4"
+                        "third1 third2 third3 third4"
+                        "fourth1 fourth2 fourth3 fourth4";
+}
+#add, #subtract, #multiply, #divide{
+  background-color : rgb(0, 120, 180);
+  color : white;
+}
+
+.displayArea {
+  /* grid-column: 1 / -1 ; */
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  font-size: 50px;
+  color: white;
+  background-color: rgb(61, 61, 61);
+  width:400px;
+  height: 100px;
+  border:3px solid black;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.displayArea .current-operand {
+  color: rgba(255, 255, 255, 1.25);
+  font-size: 60px;
+}
+
+button{
+  font-size: 30px;
+}
+
+#footer{
+  font-family:fantasy;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
